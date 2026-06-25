@@ -1,0 +1,38 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Moris Global Desk";
+}
+
+<div class="text-center py-5">
+    <h1 class="display-4">Moris Global Desk</h1>
+    <p class="lead">Quick time checks for Mauritians working with global teams.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h2 class="h4 mb-4">Current Time</h2>
+
+                <div class="mb-3">
+                    <div class="text-muted">Mauritius</div>
+                    <div class="fs-3 fw-semibold">@Model.MauritianTime.ToString("HH:mm")</div>
+                    <div>@Model.MauritianTime.ToString("dddd, dd MMMM yyyy")</div>
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                    <div class="text-muted">United Kingdom</div>
+                    <div class="fs-3 fw-semibold">@Model.UkTime.ToString("HH:mm")</div>
+                    <div>@Model.UkTime.ToString("dddd, dd MMMM yyyy")</div>
+                </div>
+
+                <div class="alert alert-info mb-0">
+                    Mauritius is currently @Model.HoursAheadOfUk hours ahead of UK time.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
